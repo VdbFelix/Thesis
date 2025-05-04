@@ -51,3 +51,14 @@ def train_spacy(TRAIN_DATA, iterations):
                 )
             print (losses)
     return (nlp)
+
+TRAIN_DATA = load_data("data/camp_training_data.json")
+random.shuffle(TRAIN_DATA)
+TRAIN_DATA = TRAIN_DATA[0:100]
+
+nlp = train_spacy(TRAIN_DATA, 5)
+
+
+doc = nlp("But you traveled from Lakhva to Lodz with your father. So, when the Germans came to Lakhva, did they form the ghetto immediately?  So, have nothing to do there, and they start the ghetto in Warsaw? And after they start to evacuate the ghetto, to take to Majdanek, to Treblinka, and the peoples they start to know they kill these people. This is the town of Plonsk. Warsaw is also a city in Poland. Pomiechowek is also a city in Poland. The Lakvha ghetto. USHMM Archive. United States Holocaust Memorial Museum. David A. Kochalski, born May 5, 1928 in Poland")
+for ent in doc.ents:
+    print (ent.text, ent.label_)

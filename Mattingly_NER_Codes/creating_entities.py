@@ -63,6 +63,8 @@ def generate_better_characters(file):
     final_characters.sort()
     return (final_characters)
 
+#This here is super important
+
 def create_training_data(file, type):
     data = generate_better_characters(file)
     patterns = []

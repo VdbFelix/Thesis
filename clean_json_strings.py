@@ -1,6 +1,7 @@
 def clean_text(file):
     file = file.replace(".", " ")
     return re.sub(r"[^\w\s]", "", file)
+#note that this function serves specifically to clean the JOSN strings by replacing periods by spaces
 
 def clean_json_strings(obj):
     if isinstance(obj, dict):

@@ -31,7 +31,7 @@ def parse_placenames(place_str):
         word = re.sub(r"^[^\w\s\-]+|[^\w\s\-]+$", "", word)
 
         # Match words that contain letters (including Unicode), spaces, or hyphens
-        if re.match(r"^[\w\s\-]+$", word) and any(c.isalpha() for c in word):
+        if re.match(r"^[\w\s\-\'\.]+$", word) and any(c.isalpha() for c in word):
             cleaned_str.append(word)
     
     if cleaned_str:
@@ -42,7 +42,7 @@ def parse_placenames(place_str):
         alt_spellings = [] 
 
     return standard_name, alt_spellings
-
+    
 # transform degree, minute and second location to decimal degrees
 def dms_to_dd(d, m, s):
     dd = d + float(m)/60 + float(s)/3600

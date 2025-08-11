@@ -15,9 +15,9 @@ def load_txt_files(directory):
             txt_files.append(f.read())
     return txt_files
 
-txt_1563 = load_txt_files("/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_text_images/johnfoxe_transcriptions/TXT/1563")
-txt_1570 = load_txt_files("/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_text_images/johnfoxe_transcriptions/TXT/1570")
-txt_1576 = load_txt_files("/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_text_images/johnfoxe_transcriptions/TXT/1576")
+txt_1563 = load_txt_files("your_1563_directory")
+txt_1570 = load_txt_files("your_1570_directory")
+txt_1576 = load_txt_files("your_1576_directory")
 
 corpus = txt_1563 + txt_1570 + txt_1576
 print(corpus[:100])

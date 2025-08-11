@@ -1,7 +1,4 @@
-# Need to install libraries to convert NGR/BGN and OS Grid to lat/long: OSGridConverter and pyproj
-#need to save the below somewhere because it was kinda slay
-    # dms_lat, dms_long = map(str.strip, [x for xs in coordinates for x in xs.split(",")])
-#used to separate a string at the comma
+#need to install libraries to convert NGR/BGN and OS Grid to lat/long: OSGridConverter
 
 import json
 import pandas as pd
@@ -14,7 +11,7 @@ def read_json(file):
         data = json.load(f)
     return data
 
-places = read_json("/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_Thesis_Codes/Training Dataset/Data_Scraping_TAMO/places_geocodes.json")
+places = read_json("your_file.json")
 results = []
 
 #parse place names into standard and alt spellings
@@ -43,7 +40,7 @@ def parse_placenames(place_str):
 
     return standard_name, alt_spellings
     
-# transform degree, minute and second location to decimal degrees
+# transform degree, minute and second coordinates to decimal degrees
 def dms_to_dd(d, m, s):
     dd = d + float(m)/60 + float(s)/3600
     return dd

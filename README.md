@@ -1,4 +1,4 @@
 # Thesis
-This space will be used to develop and explore the Python script I am devising for my MPhil thesis. 
+This repository contains the Python scripts used in the context of an MPhil thesis at Trinity College Dublin, "John Foxe's Actes and Monuments (1563-1583) through the pipeline: Named Entity Recognition in the study of early modern martyrdom". A domain-specific NER model for early modern English was trained before being deployed on the 1583 edition of John Foxe's _Actes and Monuments_.
 
-Right now I am facing a linguistic problem: my texts being in 16th century English, spaCy has a harder time recognising some of the Entities of Foxe's _Book of Martyrs_. Need to find how to circumvent this - is it possible to train spaCy's transformer model or should I use Python to 'clean' my text? How should this be done - can I modernise the spelling or train an algorithm to be able to interpret the text? 
+The repository is organised in different folders and sub-folders for different tasks that were undertaken.

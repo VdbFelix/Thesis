@@ -1,7 +1,6 @@
 # This code serves to randomly select 80 files across three different directories for a total of 
 # 240 files, and export their text to three json files. 
 # These will then be used to populate a training entities dataset
-# Code mostly generated with Claude
 
 import os
 import json
@@ -35,9 +34,9 @@ def load_txt_to_json(directory_path, output_file):
     return len(files_data)
 
 
-directory_1563 = "/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_text_images/johnfoxe_transcriptions/TXT/1563"
-directory_1570 = "/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_text_images/johnfoxe_transcriptions/TXT/1570"
-directory_1576 = "/Users/felixvdb/Desktop/DigHum/Thesis/Foxe_text_images/johnfoxe_transcriptions/TXT/1576"
+directory_1563 = "your_directory"
+directory_1570 = "your_directory"
+directory_1576 = "your_directory"
 
 
 load_txt_to_json(directory_1563, "training_1563.json")

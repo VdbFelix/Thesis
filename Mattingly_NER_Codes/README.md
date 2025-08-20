@@ -1,0 +1,1 @@
+This folder contains code adapted from Dr. W.J.B. Mattingly's 2021 [INTRODUCTION TO NAMED ENTITY RECOGNITION With a Case Study of Holocaust NER](https://ner.pythonhumanities.com/intro.html) and used to train a custom NER model thriygh spaCy v 3.0.

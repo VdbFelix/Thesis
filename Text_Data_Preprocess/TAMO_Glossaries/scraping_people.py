@@ -36,7 +36,7 @@ def add_names_dataframe(df, column='name'):
     for index, row in df.iterrows():
         name_field = row[column]
 
-        # Step 1: Extract bracketed names first
+        #extract bracketed names first
         bracket_match = re.match(r'^(.*?)\s*\(([^)]+)\)\s*$', name_field.strip())
         names_to_process = []
 
@@ -47,14 +47,14 @@ def add_names_dataframe(df, column='name'):
         else:
             names_to_process.append(name_field.strip())
 
-        # Step 2: For each name (including aliases), split on ',', 'and', or 'or'
+        #fr each name (including aliases), split on ',', 'and', or 'or'
         for name in names_to_process:
             parts = re.split(r'\s*(?:,| and | or )\s*', name)
             for part in parts:
                 if part:
                     new_rows.append({column: part.strip()})
 
-    # Create a new DataFrame from cleaned entries
+    #create a new DataFrame from cleaned entries
     cleaned_df = pd.DataFrame(new_rows)
 
     return cleaned_df.reset_index(drop=True)
